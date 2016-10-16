@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Application{% endblock %}
+
+<!-- This page needs a form that can capture data about the user's
+first name, last name, job title, and salary requirements. -->
+{% block content %}
+    <h1>Job Application</h1>
+
+    <p class="paragraph">Welcome to Melonicorn! We are looking for talented and balloonicornish engineering team members. Must be familiar with what balloonicornish stands for and how to use it
+    appropriately as an engineering concept.</p>
+
+    <form action="/application" method="POST">
+        <p>
+            <label for="first_name">First name: </label>
+            <input id="first_name" type="text" name="first_name"><br>
+        </p>
+
+        <p>
+            <label for="last_name">Last name: </label>
+            <input id="last_name" class="last_name" type="text" name="last_name"><br>
+        </p>
+
+        <p>
+            <label for="salary">Salary requirement: </label>
+            <input id="salary" type="number" name="salary"><br>
+        </p>
+
+        <p>
+            <label for="position">Which position are you applying for: </label>
+                <select id="position" name="position">
+                    <optgroup label="Engineering">
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="QA Engineer">QA Engineer</option>
+                    <option value="Product Manager">Product Manager</option>
+                    </optgroup>
+                </select><br>
+        </p>
+        <input type="submit" name="submit" value="Submit Application">
+    </form>
+
+<!-- your html goes here -->
+
+{% endblock %}
